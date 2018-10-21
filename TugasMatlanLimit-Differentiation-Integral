@@ -1,0 +1,57 @@
+#AdhinAlifarchan
+#17523062
+#Aswal
+#17523113
+
+#LIMIT
+#Nomor1
+f<- function(x){
+  fx <- (1 - cos(x)) /x
+  return(fx)
+}
+library(Ryacas)
+
+x <- Sym("x")
+
+Limit(f(x) , x , 0)
+#nomor2
+f <- function(h){
+  fx<- (2*(-3+h)^2-18)/h
+}
+library(Ryacas)
+
+h <- Sym("h")
+
+Limit(f(h) , h , 0)
+#nomor3
+f <- function(t){
+  fx<- (t- sqrt(3*t+4))/(4-t)
+}
+library(Ryacas)
+
+t <- Sym("t")
+
+Limit(f(t) , t , 4)
+
+#Differentiation
+#nomor1
+Simplify(deriv( sqrt(x)*(x+1) ))
+#nomor2
+Simplify(deriv( (2*(x^2))-3)/sqrt(x))
+#nomor3
+Simplify(deriv((x-1/(x+1))))
+#nomor4
+
+
+
+#integration
+#nomor1
+Integrate(2*(x^3), 0 , 3 , x=x)
+#nomor2
+Integrate((1-(5*(x^4))), -1 , 2 , x=x)
+#nomor3
+Integrate(x^4-(3*(x^2))+5, -2 , 2 , x=x)
+#nomor4
+Integrate(x^2+1/(2*sqrt(x)), 1 , 4 , x=x)
+#nomor5
+Integrate(x*(2-3*x)^2, 0, 2 , x=x)
